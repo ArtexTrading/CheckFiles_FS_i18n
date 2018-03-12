@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # _*_ coding: utf-8 _*_
 
-import json
 import os
-from glob import glob
+from baseutils.utils import Utils
+
 
 #
 # MAIN CLASS
@@ -17,40 +17,17 @@ class Main(object):
 
     def __init__(self):
         filename = os.path.dirname(os.path.realpath(__file__)) + '/settings'
-        self.config = self.get_json_file(filename)
-
-    @staticmethod
-    def get_json_file(filename):
-        with open(filename) as data:
-            return json.load(data)
-
-    @staticmethod
-    def set_json_file(filename, data):
-        with open(filename, 'w') as json_file:
-            json.dump(data, json_file, indent=4)
-
-    @staticmethod
-    def get_json_list(path):
-        return glob(path + '*.json')
-
-    def loadkeys(self, filename):
-        result = []
-        data = self.get_json_file(filename)
-        for key, value in data.iteritems():
-            result.append(key)
-
-        result.sort()
-        return result
+        self.config = Utils.get_json_file(filename)
 
     def run(self):
         master_file = self.config['path'] + self.config['master']
-        keys = self.loadkeys(master_file)
-        files = self.get_json_list(self.config['path'])
+        keys = Utils.loadkeys(master_file)
+        files = Utils.get_json_list(self.config['path'])
         for item in files:
             if item == master_file:
                 continue
 
-            item_data = self.get_json_file(item)
+            item_data = Utils.get_json_file(item)
             item_output = {}
             for masterkey in keys:
                 item_value = item_data.get(masterkey)
@@ -58,4 +35,4 @@ class Main(object):
                     item_output[masterkey] = item_value
 
             os.remove(item)
-            self.set_json_file(item, item_output)
+            Utils.set_json_file(item, item_output)

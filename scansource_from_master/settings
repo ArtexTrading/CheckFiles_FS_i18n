@@ -1,0 +1,27 @@
+{
+    "master": "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/Translation/en_EN.json",
+    "sources": [
+        {
+            "extension": "xml",
+            "paths": [
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/XMLView/"
+            ]
+        },
+        {
+            "extension": "twig",
+            "paths": [
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/View/"
+            ]
+        },
+        {
+            "extension": "php",
+            "paths": [
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/Model/",
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/Controller/",
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/Lib/",
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/Base/",
+                "/Users/josea/iDrive/Desarrollo/FacturaScripts/facturascripts/2018/Core/App/"
+            ]
+        }
+    ]
+}
