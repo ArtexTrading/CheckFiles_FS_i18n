@@ -7,4 +7,4 @@ Es software libre bajo licencia GNU/LGPL.
 
 # CheckFiles_FS_i18n
 
-Este proyecto contiene scripts de mantenimiento y de aplicación de correcciones para el desarrollo de Facturascripts 2018.
+Este proyecto contiene scripts de mantenimiento y correcciones sobre el apartado de multi-idioma del desarrollo de Facturascripts 2018.
