@@ -86,7 +86,8 @@ venv/
 ENV/
 
 # IDE Environments
-.idea
+.idea/
+.mypy_cache/
 
 # Spyder project settings
 .spyderproject
@@ -98,6 +99,3 @@ ENV/
 # mkdocs documentation
 /site
 
-# mypy
-.mypy_cache/
-.idea/workspace.xml
